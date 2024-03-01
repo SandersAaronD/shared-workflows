@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const archiver = require('archiver');
+const core = require('@actions/core');
 
 function generateFolder() {
     const randomHash = crypto
@@ -156,7 +157,9 @@ const main = async (args) => {
 
         // Clean up after yourself
         fs.rmdirSync(buildDir, {recursive: true});
+
+        core.setOutput("to-upload", toUploadPath)
     }
 }
 
-main(process.argv);
+main(core.getInput('distPaths', { required: true }).split(' '));
