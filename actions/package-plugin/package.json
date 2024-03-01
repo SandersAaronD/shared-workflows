@@ -1,0 +1,28 @@
+{
+  "name": "@grafana/package-plugin",
+  "version": "1.0.0",
+  "description": "Github actions script for zipping a plugin package for upload",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grafana/shared-workflows.git"
+  },
+  "keywords": [
+    "grafana",
+    "grafana plugin",
+    "github actions"
+  ],
+  "author": "Aaron Sanders",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/grafana/shared-workflows/issues"
+  },
+  "homepage": "https://github.com/grafana/shared-workflows#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "archiver": "^7.0.0"
+  }
+}
