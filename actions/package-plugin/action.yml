@@ -1,0 +1,13 @@
+name: "Grafana plugin packager"
+description: "Package a Grafana plugin as zip files for upload"
+inputs:
+  dist-paths:
+    description: "Space-separated relative paths to the dist directories of the plugins in the repository"
+    required: true
+    default: "dist"
+outputs:
+  to-upload:
+    description: "Path to the directory containing the zip files to upload"
+runs:
+  using: 'node20'
+  main: 'index.js'

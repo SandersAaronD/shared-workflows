@@ -162,4 +162,4 @@ const main = async (args) => {
     }
 }
 
-main(core.getInput('distPaths', { required: true }).split(' '));
+main(core.getInput('dist-paths', { required: true }).split(' '));
